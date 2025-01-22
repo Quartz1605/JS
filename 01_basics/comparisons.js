@@ -14,3 +14,4 @@ console.log(undefined == 0); //Yeh harr ek ke liye false dega.
 console.log("2" === 2);
 //"===" strict checking karta hai.
 
+
