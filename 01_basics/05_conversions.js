@@ -30,7 +30,7 @@ console.log(booleanIsLoggedIn);
 //"pratham" => true.
 
 let sum = 33;
-let strNum =  Sting(sum)
+let strNum =  String(sum)
 console.log(typeof strNum)
 
 
