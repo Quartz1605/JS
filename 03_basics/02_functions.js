@@ -39,3 +39,14 @@ function friends(randomArray){
 }
 
 friends(randomArray)
+
+//Another way to declare functions is 
+
+const sum = function(num1){
+    return num1+1;
+}
+
+console.log(sum(1))
+
+//Aapne agar iss tarah se function declare kiya toh aap usse pehle declaration ke use nahi kar sakte.
+//Normal tarike ke se define kiya toh pehle call kar sakte ho declaration ke.
