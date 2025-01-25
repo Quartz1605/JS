@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAC-DOM</title>
+</head>
+<body style="background-color: rgb(29, 29, 29);">
+
+    <ul class="language" style="color: white;">
+        <li>JavaScript</li>
+
+    </ul>
+    
+</body>
+<script>
+    function addLanguage(langName){
+        const li = document.createElement('li')
+        li.innerHTML = langName;
+        document.querySelector('.language').appendChild(li) 
+        
+    }
+
+    addLanguage("python");
+    addLanguage("typscript");
+
+
+    //Another way(Thodasa optimized way)
+    function addOptiLanguage(langName){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage('golang')
+
+
+    //Editing of values.
+
+    const secondLang = document.querySelector("li:nth-child(2)")//Yeh css hai through which aap chhun sakte hai.
+    //secondLang.innerHTML = "Ruby on Rails"
+
+    //optimized approach
+    const newLi = document.createElement('li')
+    newLi.textContent = "Mojo"
+    secondLang.replaceWith(newLi) //New method which is replaceWith.
+
+    //Just Practising.
+    const liNew2 = document.createElement('li')
+    liNew2.innerText = "typscript"
+    const actualLi = document.querySelector("li:nth-child(1)")
+    actualLi.replaceWith(liNew2)
+
+    //Remove
+    const LastLang = document.querySelector("li:last-child")
+    LastLang.remove()
+    
+
+    
+
+
+
+    
+
+</script>
+</html>
