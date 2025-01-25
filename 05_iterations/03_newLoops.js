@@ -1,4 +1,4 @@
-// for of Loops
+// "for of" Loops
 // [{},{},{}]
 
 const arr = [1,2,3,4,5]
@@ -35,7 +35,7 @@ for(let [key,value] of map){
 }
 
 //Object in "for of" loop
-
+//"for of" loops objects mein nahi chalte.
 const myObj = {
     game1: "NFS",
     game2: "NFS2",
