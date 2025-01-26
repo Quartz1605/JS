@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer.</title>
+    
+    <style>
+        .body{
+            background-color: rgb(255, 255, 255)
+        }
+        .links{
+            font-size: 20px;
+            background-color: orchid;
+            color: rgb(0, 0, 0);
+            border-radius: 10px;
+            border-style: solid;
+            padding: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            border-color: black;
+            
+        }
+        .links:hover{
+            
+            cursor: pointer;
+        }
+        
+        .name{
+            color: rgb(0, 0, 0);
+            font-size: 38px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 15px;
+        }
+        .colors{
+            font-size: 35px;
+            padding: 15px;
+        }
+        
+        .button{
+            height: 100px;
+            width: 100px;
+            border:  black;
+            display: inline-block;
+            border-style: solid;
+        }
+
+        #grey{
+            background-color: grey;
+        }
+        #white{
+            background-color: white;
+        }
+        #blue{
+            background-color: rgb(49, 49, 233);
+        }
+        #yellow{
+            background-color: rgb(251, 251, 67);
+        }
+        .button:hover{
+            cursor: pointer;
+        }
+
+
+        
+        
+
+        
+        
+        
+
+    </style>
+</head>
+
+<body class="body">
+    <nav>
+       <div style="display: flex;justify-content: center;gap: 30px;">
+            <div>
+                <a href="https://youtu.be/_TjtAyMkiTI?feature=shared"><button class="links">Youtube channel</button></a>
+            </div>
+            <div>
+                <a href="https://www.instagram.com/p/DFGDvFAoPHj-P5-KRaOL0Ryf296xP67YE3rfTs0/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="><button class="links">Pratham Barekal.</button></a>
+            </div>
+        </div>
+    </nav>
+
+    <div style="display:flex;justify-content: center;">
+        <p class="name">COLOUR SCHEME SWITCHER</p>
+    </div>
+
+    <div style="display: flex;flex-direction: row;justify-content: center;gap:35px">
+        <span class="button" id="grey" ></span>
+        <span class="button" id="white"></span>
+        <span class="button" id="blue"></span>
+        <span class="button" id="yellow"></span>
+    </div>
+
+    <h1 style="text-align: center;font-family:Arial, Helvetica, sans-serif;padding-top: 24px;">Try clicking on one of the colours above to change the background colour of this page.</h1>
+    <script src="colorChanger.js"></script>
+
+</body>
+</html>
