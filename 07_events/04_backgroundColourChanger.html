@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unlimited colours.</title>
+    <style>
+      .links {
+        font-size: 20px;
+        background-color: orange;
+        color: rgb(26, 26, 26);
+        border-radius: 10px;
+        border: none;
+
+        padding: 5px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .links:hover {
+        background-color: rgb(154, 106, 16);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body style="background-color: rgb(26, 26, 26)">
+    <nav style="background-color: rgb(26, 26, 26); height: 75px">
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          gap: 30px;
+          padding-top: 20px;
+        "
+      >
+        <div>
+          <a href="https://youtu.be/_TjtAyMkiTI?feature=shared"
+            ><button class="links">Youtube channel</button></a
+          >
+        </div>
+        <div>
+          <a
+            href="https://www.instagram.com/p/DFGDvFAoPHj-P5-KRaOL0Ryf296xP67YE3rfTs0/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+            ><button class="links">prathambarekal.</button></a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <h1 style="color: azure">
+      Start should change the Background color every second.
+    </h1>
+    <button class="start">Start</button>
+    <button class="stop">Stop</button>
+
+    <script>
+
+
+              //How to create random using hex code.
+
+             const randomColours = () => {
+                  const hex = "0123456789ABCDEF"
+
+                  let color = '#'
+                  for(let i=0;i<6;i++){
+                      color += Math.floor(Math.random() * 16)
+                  }
+
+                 return color;
+              }
+
+              let colourChange // isse bahar hi define karo yeh na chalta nahi hai in clearTimeInterval because of scope reasons.
+
+              document.querySelector('.start').addEventListener("click",(event) => {
+
+                  colourChange = setInterval(() => {
+                      let colours = randomColours()
+                      document.body.style.backgroundColor = colours
+                      document.querySelector("nav").style.backgroundColor = colours
+                  },500)
+              })
+
+              document.querySelector('.stop').addEventListener("click",(event) => {
+
+                      clearInterval(colourChange)
+
+              })
+    </script>
+  </body>
+</html>
